@@ -31,10 +31,6 @@
     // Medical condition = 'N' (default)
     let medical_condition = prompt("Medical Cause or Not ( 'Y' or 'N')", "N");
 
-    document.getElementById("input_t_c").innerHTML = total_class;
-    document.getElementById("input_t_c_a").innerHTML = total_class_attended;
-    document.getElementById("input_m_c").innerHTML = medical_condition.toUpperCase();
-
     if (medical_condition !== "y") {
       if ((output = total_class_attended / total_class) > 0.75) {
         document.getElementById("output").innerHTML = true;
@@ -48,5 +44,9 @@
         document.getElementById("output").innerHTML = false;
       }
     }
+    
+    document.getElementById("input_t_c").innerHTML = total_class;
+    document.getElementById("input_t_c_a").innerHTML = total_class_attended;
+    document.getElementById("input_m_c").innerHTML = medical_condition.toUpperCase();
   </script>
 </html>
