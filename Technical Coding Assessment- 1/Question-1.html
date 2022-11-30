@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Coding Assessment-Q-1</title>
+  </head>
+  <body>
+
+    <div>
+      <h3>Input:-</h3>
+      <p id="input"></p>
+    </div>
+
+    <div>
+      <h3>Output:-</h3>
+      <p id="output"></p>
+    </div>
+
+  </body>
+
+  <script>
+
+    let input = prompt("Pls enter an input", "1234");
+    let output = 0;
+    let size = input.length;
+    console.log(size);
+    document.getElementById("input").innerHTML = input;
+
+    if (input > 0 && input != null) {
+      for (i = 0; i < size; i++) {
+        output = output * 10 + (input % 10);
+        input = Math.floor(input / 10);
+      }
+      console.log(output);
+      document.getElementById("output").innerHTML = output;
+    }
+    
+  </script>
+</html>
